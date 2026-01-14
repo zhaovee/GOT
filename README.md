@@ -4,28 +4,28 @@
   The system is designed to manage students, courses, and academic performance, and to support basic monitoring and reporting functionalities.
 
 # Technology Stack
-  Programming Language: Java
-  Web Framework: Java Servlet & JSP
-  Architecture: MVC (Model–View–Controller)
-  Database: SQL Server (configurable via JDBC)
-  Server: Apache Tomcat 9
-  IDE: Spring Tool Suite (STS)
-  Build Tool: Maven
+Backend: Java, Spring / Spring MVC
+Frontend: JSP, HTML, CSS, JavaScript
+Database: Microsoft SQL Server
+ORM / Persistence: JPA / Hibernate
+Server: Apache Tomcat 9.x
+IDE: Spring Tool Suite (STS) 
+Build Tool: Maven
 
 # Setup & Installation
   1.Clone or Import Project
   2.Database Configuration
-    Update database connection settings in: com.got.util.DBUtil
-    example：
-    String url = "jdbc:sqlserver://localhost:1433;databaseName=xxxx";
-    String username = "your_name";
-    String password = "your_password";
-3.Run on Tomcat
+    2.1 Create a database in SQL Server:  CREATE DATABASE GOT_DB;
+    2.2 Configuration Database in "java\com\got\config\Appconfig.java"
+          dataSource.setUrl("jdbc:sqlserver://localhost:“Appropriate port”;databaseName=GOT_DB;encrypt=true;trustServerCertificate=true;");
+          dataSource.setUsername("your username");
+          dataSource.setPassword("your password");
+  3.Run on Tomcat
 
 # Default Environment
-JDK: 17
-Tomcat: 9.0
-Database: SQL Server
+  JDK: 17
+  Tomcat: 9.0
+  Database: SQL Server
 
 # Author
-Liu Ruoyan, Zhao Wei, Bu Guoshun, Liu Wanpeng
+  Liu Ruoyan, Zhao Wei, Bu Guoshun, Liu Wanpeng
